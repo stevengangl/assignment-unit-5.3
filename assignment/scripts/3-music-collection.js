@@ -14,7 +14,7 @@ function addToCollection(title, artist, yearPublished) {
 
 console.log('adding to the collection array', addToCollection('dog1', 'cat1', 11))
 
-console.log('2nd added', addToCollection('dog2', 'cat2', 12))
+console.log('2nd added', addToCollection('dog2', 'cat1', 12))
 
 console.log('3rd added', addToCollection('dog3', 'cat3', 13))
 
@@ -51,6 +51,10 @@ function findByArtist(artist) {              //input parameter should be a strin
         if(artist === collection[i].albumArtist){
             array.push(collection[i])
         }
+        
     }
-    
+    console.log(array);
 }
+findByArtist('cat1');
+console.log(findByArtist('cat13'));
+
