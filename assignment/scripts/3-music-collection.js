@@ -1,16 +1,16 @@
 console.log('***** Music Collection *****')
+console.log('start First question')
 
 let collection = []
 function addToCollection(title, artist, yearPublished) {
     let music = {
-        title: title,
-        artist: artist,
-        yearPublished: yearPublished
+        albumTitle: title,
+        albumArtist: artist,
+        albumYearPublished: yearPublished
     }
     collection.push(music)
     return music;
 }
-addToCollection('dog', 'cat', 10)
 
 console.log('adding to the collection array', addToCollection('dog1', 'cat1', 11))
 
@@ -25,4 +25,32 @@ console.log('5th added', addToCollection('dog5', 'cat5', 15))
 console.log('6th added', addToCollection('dog6', 'cat6', 16))
 
 console.log('collection array', collection);
+console.log('End of First question')
 
+console.log('Start ofSecond question')
+
+
+
+function showCollection(array) {
+    console.log(collection.length);
+    for (i = 0; i < collection.length; i++) {
+        console.log(array[i].albumTitle, 'by', array[i].albumArtist, 'published in', array[i].albumYearPublished)
+    }
+}
+showCollection(collection);
+
+console.log(showCollection(collection));
+
+console.log('End of second question');
+
+console.log('Start of third question');
+
+function findByArtist(artist) {              //input parameter should be a string
+    let array = [];
+    for (i = 0; i < collection.length; i++){
+        if(artist === collection[i].albumArtist){
+            array.push(collection[i])
+        }
+    }
+    
+}
