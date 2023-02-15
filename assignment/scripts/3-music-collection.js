@@ -4,9 +4,9 @@ console.log('start First question')
 let collection = []
 function addToCollection(title, artist, yearPublished) {
     let music = {
-        albumTitle: title,
-        albumArtist: artist,
-        albumYearPublished: yearPublished
+        songTitle: title,
+        songArtist: artist,
+        songYearPublished: yearPublished
     }
     collection.push(music)
     return music;
@@ -34,7 +34,7 @@ console.log('Start ofSecond question')
 function showCollection(array) {
     console.log(collection.length);
     for (i = 0; i < collection.length; i++) {
-        console.log(array[i].albumTitle, 'by', array[i].albumArtist, 'published in', array[i].albumYearPublished)
+        console.log(array[i].songTitle, 'by', array[i].songArtist, 'published in', array[i].songYearPublished)
     }
 }
 showCollection(collection);
@@ -48,7 +48,7 @@ console.log('Start of third question');
 function findByArtist(artist) {              //input parameter should be a string
     let array = [];
     for (i = 0; i < collection.length; i++){
-        if(artist === collection[i].albumArtist){
+        if(artist === collection[i].songArtist){
             array.push(collection[i])
         }
         
